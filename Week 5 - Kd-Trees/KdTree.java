@@ -28,7 +28,7 @@ public class KdTree {
 		return (size == 0);
 	}
 	
-	public int size() {		// number of points in the set
+	public int size() {	// number of points in the set
 		return size;
 	}
 	
