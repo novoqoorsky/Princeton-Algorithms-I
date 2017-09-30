@@ -24,7 +24,7 @@ public class BruteCollinearPoints {
 				}
 			}
 		}
-        segments = found.toArray(new LineSegment[found.size()]);
+        	segments = found.toArray(new LineSegment[found.size()]);
 	}
 	
 	private boolean invalidArray(Point[] points) {
