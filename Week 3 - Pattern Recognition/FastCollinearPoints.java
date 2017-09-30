@@ -10,19 +10,19 @@ public class FastCollinearPoints {
 			 throw new IllegalArgumentException();
 		 }
 		 Point[] pointsCopy = points.clone();
-	     for (int i = 0; i < pointsCopy.length - 3; i++) {
-	    	 Arrays.sort(pointsCopy);
-	    	 Arrays.sort(pointsCopy, pointsCopy[i].slopeOrder());
-	         for (int j = 0, k = 1, m = 2; m < pointsCopy.length; m++) {
-	        	 while (m < pointsCopy.length && areCollinear(pointsCopy[j], pointsCopy[k], pointsCopy[m])) {
-	        		 m++;
-	             }
-	             if (m - k >= 3 && pointsCopy[j].compareTo(pointsCopy[k]) < 0) {
-	            	 segments.add(new LineSegment(pointsCopy[j], pointsCopy[m - 1]));
-	             }
-	             k = m;
-	         }
-	     }
+	     	 for (int i = 0; i < pointsCopy.length - 3; i++) {
+	    	 	Arrays.sort(pointsCopy);
+	    	 	Arrays.sort(pointsCopy, pointsCopy[i].slopeOrder());
+	         	for (int j = 0, k = 1, m = 2; m < pointsCopy.length; m++) {
+	        		while (m < pointsCopy.length && areCollinear(pointsCopy[j], pointsCopy[k], pointsCopy[m])) {
+	        			m++;
+	             		}
+	             		if (m - k >= 3 && pointsCopy[j].compareTo(pointsCopy[k]) < 0) {
+	            			segments.add(new LineSegment(pointsCopy[j], pointsCopy[m - 1]));
+	             		}
+	             		k = m;
+	         	}
+	     	 }
 	 }
 	
 	 private boolean invalidArray(Point[] points) {
