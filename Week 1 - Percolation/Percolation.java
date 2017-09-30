@@ -7,7 +7,7 @@ public class Percolation {
 	private boolean[][] opened;
 	private int openedCounter;
 	
-	public Percolation(int n) {		// create n-by-n grid, with all sites blocked
+	public Percolation(int n) {	// create n-by-n grid, with all sites blocked
 		if (n <= 0) {
 			throw new java.lang.IllegalArgumentException();
 		}
@@ -33,7 +33,7 @@ public class Percolation {
 		return unionFind.connected(0, (row-1)*size + col);
 	}
 	
-	private void connect(int row, int col) {		// connect two sites
+	private void connect(int row, int col) {	// connect two sites
 		unionFind.union(row, col);
 	}
 	
